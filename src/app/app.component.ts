@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { MydemoService } from './service/mydemo.service';
 
 
 
@@ -25,8 +24,5 @@ interface Classmates {
 })
 export class AppComponent{
   AppComponentStr:any = "AppComponent"
-  constructor(private moduleService:MydemoService){
-    this.AppComponentStr = moduleService
-  }
 
 }
