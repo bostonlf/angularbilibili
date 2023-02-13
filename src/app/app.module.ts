@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
@@ -8,7 +8,10 @@ import { FatherchildModule } from './fatherchild/fatherchild.module';
 import { CutstringPipe } from './pipes/cutstring.pipe';
 import { ZjczComponent } from './components/zjcz/zjcz.component';
 import { SchoolComponent } from './components/school/school.component';
-import { ClassComponent } from './components/school/class/class.component'
+import { ClassComponent } from './components/school/class/class.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import { ClassComponent } from './components/school/class/class.component'
     BrowserModule,
     AppRoutingModule,
     FatherchildModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [],
   bootstrap: [AppComponent]
