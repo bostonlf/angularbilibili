@@ -12,7 +12,7 @@ import { ClassComponent } from './components/school/class/class.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
-
+import { DirectiveModule } from './directive/directive.module'; 
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools'
     FatherchildModule,
     FormsModule,
     StoreModule.forRoot(reducers, { metaReducers }),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
+    DirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]
