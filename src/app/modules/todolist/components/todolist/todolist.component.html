@@ -3,3 +3,9 @@
 <br>
 <hr>
 {{ todos | async | json}}
+<hr>
+<p *ngFor="let todo of todos | async">
+
+{{ todo.title}}
+
+</p>
