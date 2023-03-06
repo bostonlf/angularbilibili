@@ -13,6 +13,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { DirectiveModule } from './directive/directive.module'; 
+import { TodolistModule } from './modules/todolist/todolist.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DirectiveModule } from './directive/directive.module';
     FormsModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     StoreDevtoolsModule.instrument(),
-    DirectiveModule
+    DirectiveModule,
+    TodolistModule
   ],
   providers: [],
   bootstrap: [AppComponent]
